@@ -128,6 +128,7 @@ hr {
 
 .con-h1-type {
   height: 50px;
+  margin-bottom: 50px;
 }
 .con-h1-type .typewriter {
   /*font-size: 1.8rem;*/
@@ -241,6 +242,10 @@ hr {
   }
   .line {
     width: 90%;
+  }
+  .con-h1-type {
+    height: 50px;
+    margin-bottom: 100px;
   }
 }
 /* Navbar Trasparente con sfondo nero e bordi arrotondati */
@@ -487,7 +492,7 @@ nav {
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
-  font-size: clamp(2rem, 2vw, 3.5rem); /* 2rem è la dimensione minima, 5vw è la dimensione ideale e 3.5rem è la massima */
+  font-size: clamp(1.5rem, 2vw, 3.5rem); /* 2rem è la dimensione minima, 5vw è la dimensione ideale e 3.5rem è la massima */
 }
 .cont-about .p-about {
   font-size: 17px;
@@ -544,6 +549,10 @@ font-size: 70px;
 }
 
 /*---=====Bara delle percentuali=====---*/
+.cont0-skills {
+  margin-top: 100px;
+}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -559,7 +568,8 @@ font-size: 70px;
 }
 
 .skill-label {
-  font-size: 1rem;
+  /*font-size: 1rem;*/
+  font-size: clamp(0.8rem, 2vw, 3.5rem);
   font-weight: 600;
   color: #fff;
   margin-bottom: 5px;
@@ -608,160 +618,9 @@ font-size: 70px;
   }
 }
 @media (max-width: 700px) {
-  .skills {
+  /*.skills {
     grid-template-columns: 1fr;
-  }
-}
-/* Titolo principale */
-#h1-cube {
-  margin-bottom: 50px;
-  font-size: 2.4em;
-  text-align: center;
-  color: #fff;
-  font-weight: 700;
-}
-
-/* Contenitore dei cubi */
-.cube-0 {
-  display: flex;
-  justify-content: center;
-  gap: 50%;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-/* Blocchi di skills */
-.skill-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Titoli per i cubi (Tecnico, Soft skills, etc.) */
-.cube-title {
-  text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.cube-title.tech {
-  color: #3498db; /* Blu professionale */
-}
-
-.cube-title.soft {
-  color: #2ecc71; /* Verde chiaro per soft skills */
-}
-
-/* Animazione dei cubi (contenitore) */
-.animation-container {
-  perspective: 1000px;
-}
-
-/* Cubo */
-.cube {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease, box-shadow 0.3s ease;
-  animation: cubeRotate 15s infinite linear; /* Aggiunta rotazione continua */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; /* Aggiungi angoli arrotondati */
-}
-
-/* Cubo hover */
-.cube:hover {
-  transform: rotateX(20deg) rotateY(20deg); /* Effetto di rotazione al passaggio del mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Facce del cubo */
-.cube-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Grigio scuro trasparente */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Bordi sottili chiari */
-  border-radius: 8px; /* Angoli arrotondati per un look moderno */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9em;
-  color: #fff;
-  font-weight: 600;
-  text-align: center;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra interna per profondità */
-}
-
-.cube-face i {
-  font-size: 1.3em;
-  margin-bottom: 6px;
-}
-
-.cube-face span {
-  font-weight: 500;
-}
-
-/* Posizioni delle facce in 3D */
-.front {
-  transform: rotateY(0deg) translateZ(50px);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(50px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(50px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(50px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(50px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(50px);
-}
-
-/* Animazione di rotazione continua */
-@keyframes cubeRotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: rotateX(180deg) rotateY(180deg);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-/* Media Query per la visualizzazione mobile e tablet */
-@media (max-width: 768px) {
-  .cube-0 {
-    /*flex-direction: column;*/
-    align-items: center;
-    gap: 60px;
-  }
-  .cube-face {
-    font-size: 0.75em;
-  }
-  #h1-cube {
-    font-size: 1.8em;
-  }
-}
-/* Ulteriore ottimizzazione mobile */
-@media (max-width: 480px) {
-  .cube-face {
-    font-size: 0.7em;
-  }
-  #h1-cube {
-    font-size: 1.6em;
-  }
+  }*/
 }
 /* =====================================Sezione Progetti============================================ */
 #projects {
@@ -783,7 +642,7 @@ font-size: 70px;
 }*/
 #h1-project {
   font-family: "Merriweather", serif;
-  font-size: 2.8rem;
+  /*font-size: 2.8rem;*/
   font-weight: 700;
   color: transparent; /* Rende il testo trasparente per applicare l'effetto */
   background: rgba(231, 192, 107, 0.3); /* Colore oro traslucido per effetto vetro */
@@ -794,6 +653,7 @@ font-size: 70px;
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
 }
 
 .title-bg {
@@ -839,9 +699,11 @@ font-size: 70px;
 }
 
 .scroll-container {
-  border-right: 10px solid black;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-right: 10px solid;
+  -o-border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
+     border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
+  /*border-top-right-radius: 20px; 
+  border-bottom-right-radius: 20px;*/
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -876,6 +738,7 @@ font-size: 70px;
 }
 
 .card_1 {
+  border-radius: 0px;
   width: 20%;
 }
 
@@ -904,8 +767,8 @@ font-size: 70px;
 
 .highlight {
   border: 3px solid;
-  -o-border-image: linear-gradient(to bottom, red, orange, cyan) 1;
-     border-image: linear-gradient(to bottom, red, orange, cyan) 1;
+  -o-border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
+     border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
 }
 
 /* Nasconde scrollbar */
@@ -943,11 +806,13 @@ font-size: 70px;
     flex-direction: row; /* Mantenere la disposizione orizzontale */
     overflow-x: scroll;
     gap: 1.5rem;
-    padding: 0;
+    padding: 8px;
     width: 99%;
+    height: auto;
   }
   .card {
-    width: 30%;
+    width: 50%;
+    height: 150px;
     margin: 0 auto;
   }
   .card_1 {
@@ -1031,7 +896,7 @@ font-size: 70px;
 }*/
 #h1-contact {
   font-family: "Merriweather", serif;
-  font-size: 2.8rem;
+  /*font-size: 2.8rem;*/
   font-weight: 700;
   color: transparent; /* Rende il testo trasparente per applicare l'effetto */
   background: rgba(231, 192, 107, 0.3); /* Colore oro traslucido per effetto vetro */
@@ -1042,6 +907,7 @@ font-size: 70px;
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
 }
 
 /*.p-tutti {
@@ -1091,7 +957,7 @@ font-size: 70px;
 
 .cta-button:hover {
   background-position: right center;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); /* glow dorato */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); /* glow dorato */
   transform: translateY(-3px);
 }
 
@@ -1150,7 +1016,7 @@ font-size: 70px;
 
 .contact-card i {
   font-size: 2rem;
-  color: #FFD700;
+  color: #000000;
   /*margin-bottom: 20px;*/
   transition: color 0.3s ease-in-out;
 }
