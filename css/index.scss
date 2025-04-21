@@ -200,7 +200,7 @@ hr{border:none; border-bottom: 1px solid #ddd}
 
 .tech-icons i {
   /*font-size: 3rem;*/
-  font-size: clamp(1.9rem, 5vw, 9.9rem);
+  font-size: clamp(1.9rem, 5vw, 3.9rem);
   color: #999;
   transition: color 0.3s, transform 0.3s;
 }
@@ -387,7 +387,7 @@ box-shadow: 0 0 10px rgba(243, 156, 18, 0.8); /* Luminosità dorata al focus */
 }
 
 .mobile-nav a:hover {
-    color: #f1c40f;
+    color: #5a5954;
 }
 
 /* Media Queries */
@@ -807,6 +807,7 @@ font-size: 70px;
     padding: 1rem 0;
     cursor: grab;
     user-select: none;
+    width: 100%;
   }
   
   .scroll-container:active {
@@ -833,6 +834,14 @@ font-size: 70px;
   .card_1 {
     border-radius: 0px;
     width: 20%;
+  }
+
+  #h2-cont21{
+    color: white;
+  }
+
+  .p-cont21{
+    color: white;
   }
   
  
@@ -959,7 +968,7 @@ font-size: 70px;
 /* =====================================Sezione Contatti=============================================== */
  /* Sezione Contatti */
  #contact {
-    padding: 100px 20px;
+    padding: 20px 20px;
     background: linear-gradient(135deg, #1d1d1d, #2b2b2b);
     text-align: center;
     position: relative;
@@ -1097,7 +1106,7 @@ font-size: 70px;
     gap: 40px;
     flex-wrap: wrap;
     animation: fadeIn 1.2s ease-out;
-    margin-bottom: 50px;
+    /*margin-bottom: 10px;*/
 }
 
 /* Card Contatto */
