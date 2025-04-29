@@ -12,8 +12,8 @@ function toggleMenu() {
 const phrases = [
   "Web Developer",
   "Front-End",
-  "Design pulito",
-  "Codice pulito."
+  "UI Minimalista",
+  "Codice leggibile"
 ];
 
 let j = 0;
@@ -50,7 +50,7 @@ type();
   // Funzione per avviare l'animazione delle barre di progresso
   function startAnimation() {
     const progressBars = document.querySelectorAll(".skill-progress");
-    const percentages = document.querySelectorAll(".percentage");
+    const percentages = document.querySelectorAll(".percentuale-skills");
 
     progressBars.forEach((bar, index) => {
       const value = parseInt(bar.getAttribute("data-progress"));

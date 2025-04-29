@@ -37,21 +37,13 @@ hr {
   border-bottom: 1px solid #ddd;
 }
 
-/* Colori di base e font */
-/*body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #cfcfcf;
-    color: #f1f1f1;
-
-
-}*/
+/*---=====Variabili=====---*/
 #main-prin {
   overflow-x: clip;
 }
 
 /*codice del header*/
+/*variabili css*/
 :root {
   /*--primary: #00fff7;*/
   --primary: #d1d4d4;
@@ -65,33 +57,15 @@ hr {
 #home {
   padding: 0px 20px;
   background: linear-gradient(135deg, #1d1d1d, #2b2b2b);
-  /* text-align: center; */
   padding-bottom: 70px;
 }
 
-/*#home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}*/
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -99,9 +73,6 @@ hr {
   flex-direction: column;
   height: 100vh;
   text-align: center;
-  /*padding: 0 2rem;*/
-  /*position: relative;
-  z-index: 1;*/
 }
 
 .hero::before {
@@ -117,7 +88,6 @@ hr {
 }
 
 .magic-title {
-  /*font-size: 4rem;*/
   font-weight: 900;
   color: var(--text);
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
@@ -126,12 +96,16 @@ hr {
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
+.magic-title:hover {
+  color: var(--primary);
+  text-shadow: 0 0 30px var(--primary);
+}
+
 .con-h1-type {
   height: 50px;
   margin-bottom: 50px;
 }
 .con-h1-type .typewriter {
-  /*font-size: 1.8rem;*/
   font-size: clamp(2rem, 5vw, 3rem);
   color: var(--primary);
   border-right: 2px solid var(--primary);
@@ -144,10 +118,8 @@ hr {
   background: rgba(255, 255, 255, 0.5);
   background-clip: text;
   -webkit-background-clip: text;
-  /* margin-bottom: 20px; */
   letter-spacing: 1px;
   text-transform: uppercase;
-  /*line-height: 1.2;*/
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -164,13 +136,6 @@ hr {
     border-color: transparent;
   }
 }
-/* Hover effect on magic title */
-.magic-title:hover {
-  color: var(--primary);
-  text-shadow: 0 0 30px var(--primary);
-}
-
-/* Button style */
 .btn {
   margin-top: 2.5rem;
   padding: 0.8rem 2.2rem;
@@ -190,15 +155,6 @@ hr {
   box-shadow: 0 0 15px var(--primary);
 }
 
-/* New Element: Horizontal lines */
-/*.line {
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(0, 255, 247, 0.7), transparent);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
-}*/
 .line {
   width: 80%;
   height: 2px;
@@ -210,33 +166,24 @@ hr {
 
 /* Tech icons */
 .tech-icons {
-  /*margin-top: 3rem;*/
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
-
-.tech-icons i {
-  /*font-size: 3rem;*/
+.tech-icons .i-icone {
   font-size: clamp(1.9rem, 5vw, 3.9rem);
   color: #999;
   transition: color 0.3s, transform 0.3s;
 }
 
-.tech-icons i:hover {
+.i-icone:hover {
   color: var(--primary);
   transform: scale(1.2);
 }
 
 /* Media queries */
 @media (max-width: 768px) {
-  /*.magic-title {
-    font-size: 2.5rem;
-  }*/
-  /*.typewriter {
-    font-size: 1.4rem;
-  }*/
   .btn {
     padding: 0.6rem 1.8rem;
   }
@@ -248,53 +195,29 @@ hr {
     margin-bottom: 100px;
   }
 }
-/* Navbar Trasparente con sfondo nero e bordi arrotondati */
 nav {
-  /*margin-top: 5px;*/
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  /*margin-left: 10px;
-  margin-right: 10px;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
   background-color: #333333;
-  /*background: rgba(43, 43, 43, 0.95);*/
-  /*background: rgba(0, 0, 0, 0.7);*/ /* Più trasparente */
-  /*border-radius: 100px; /* Bordo arrotondato */
   z-index: 1000;
   transition: all 0.3s ease;
-  /*border: 1px solid black;*/
 }
 
-/* Logo Circle (image) */
-.logo {
-  display: flex;
-  align-items: center; /* Allinea verticalmente al centro */
-  justify-content: center; /* Centra orizzontalmente, se necessario */
-}
-
-.logo img {
+.logo-nav {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Rende l'immagine rotonda */
+  border-radius: 50%;
   -o-object-fit: cover;
-     object-fit: cover; /* Adatta l'immagine all'interno del contenitore */
-  display: block; /* Rimuove eventuali spazi bianchi sotto l'immagine */
+     object-fit: cover;
+  display: block;
 }
 
-/* Container per le sezioni */
-.nav-container {
-  display: flex;
-  gap: 30px;
-  padding: 10px;
-  border-radius: 30px; /* Bordo arrotondato */
-}
-
-/* Navbar links */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -302,8 +225,7 @@ nav {
   font-weight: 500;
   color: white;
 }
-
-.nav-links a {
+.nav-links .a-nav {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
@@ -311,37 +233,6 @@ nav {
 
 .nav-links a:hover {
   color: #f1c40f;
-}
-
-.contact-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #212121; /* Nero scuro profondo */
-  color: white;
-  border: 2px solid transparent; /* Bordi trasparenti per un aspetto pulito */
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.4s ease-in-out;
-  text-transform: uppercase;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra delicata per un effetto 3D */
-  font-family: "Helvetica Neue", sans-serif; /* Font moderno */
-}
-
-/* Effetto hover - più elegante */
-.contact-button:hover {
-  transform: scale(1.05); /* Leggero ingrandimento */
-  background-color: #333333; /* Grigio scuro per l'hover */
-  border-color: #f1c40f; /* Colore dorato per un tocco di lusso */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra più intensa durante l'hover */
-  color: #f1c40f; /* Testo dorato durante l'hover */
-}
-
-/* Effetto focus per migliorare l'interazione */
-.contact-button:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(243, 156, 18, 0.8); /* Luminosità dorata al focus */
 }
 
 /* Menu Hamburger */
@@ -364,12 +255,10 @@ nav {
   padding: 50px 20px;
   z-index: 999;
 }
-
-.mobile-nav.active {
+.mobile-nav .active {
   left: 0;
 }
-
-.mobile-nav a {
+.mobile-nav .a-hamburger {
   display: block;
   color: white;
   text-decoration: none;
@@ -391,133 +280,48 @@ nav {
     display: block;
   }
 }
-/* Colori e animazioni */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Animazione di typing */
-.typing {
-  display: inline-block;
-  overflow: hidden;
-  border-right: 0.1em solid #fff;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3s steps(30) 1s 1 normal both, blink 0.7s step-end infinite;
-}
-
-.typing-con {
-  width: 90%;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-/* Sezione Home */
-/*#home h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}*/
-#home p {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  opacity: 0.7;
-}
-
 /* ------------------------------------------Sezione Chi Sono-------------------------------------------- */
 #about {
   padding: 0px 20px;
   background: linear-gradient(135deg, #1d1d1d, #2b2b2b);
-  /*text-align: center;*/
   padding-bottom: 70px;
 }
 
-/*#about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}*/
-/*#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.8;
-    text-align: left;
-}*/
 .about_me {
   margin-bottom: 50px;
 }
 
 .cont-about {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .cont-about .h2-about {
   font-family: "Merriweather", serif;
   font-size: 2.8rem;
   font-weight: 700;
-  color: transparent; /* Rende il testo trasparente per applicare il background */
-  background: rgba(255, 255, 255, 0.5); /* Fondo bianco traslucido per effetto vetro chiaro */
-  background-clip: text; /* Applica lo sfondo solo al testo */
+  color: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  background-clip: text;
   -webkit-background-clip: text;
-  /*margin-bottom: 20px;*/
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.2;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
-  font-size: clamp(1.5rem, 2vw, 3.5rem); /* 2rem è la dimensione minima, 5vw è la dimensione ideale e 3.5rem è la massima */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: clamp(1.5rem, 2vw, 3.5rem);
 }
 .cont-about .p-about {
   font-size: 17px;
-  line-height: 1.4; /* Aumenta lo spazio tra le righe */
+  line-height: 1.4;
 }
 
-/*#about_me {
-font-size: 70px; 
-    position: relative;  
-    top: -40px; 
-    z-index: 10; 
-    font-weight: 900;
-    color: #fff9c7;
-    opacity: 0.15;
-}*/
 .about-container_21 {
   display: flex;
-  justify-content: center; /* Centra orizzontalmente */
-  align-items: center; /* Centra verticalmente */
-  top: -131px; /* Sposta l'immagine di 10px verso l'alto */
-  z-index: 10; /* Assicura che sia sopra gli altri elementi */
-  position: relative; /* Per gestire il posizionamento relativo */
+  justify-content: center;
+  align-items: center;
+  top: -131px;
+  z-index: 10;
+  position: relative;
 }
-
-.about-img {
+.about-container_21 .about-img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -537,47 +341,42 @@ font-size: 70px;
   font-family: "Merriweather", serif;
   font-size: 2rem;
   font-weight: 700;
-  color: transparent; /* Rende il testo trasparente per applicare l'effetto */
-  background: rgba(202, 202, 202, 0.3); /* Colore #00eaff con opacità */
-  background-clip: text; /* Applica lo sfondo solo al testo */
-  -webkit-background-clip: text; /* Supporto per Webkit */
+  color: transparent;
+  background: rgba(202, 202, 202, 0.3);
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-bottom: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.2;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 /*---=====Bara delle percentuali=====---*/
 .cont0-skills {
   margin-top: 100px;
 }
-
-.skills {
+.cont0-skills .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 60px;
   max-width: 900px;
   margin: 0 auto;
 }
-
-.skill-bar {
+.cont0-skills .skill-bar {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-.skill-label {
-  /*font-size: 1rem;*/
-  font-size: clamp(0.8rem, 2vw, 3.5rem);
+.cont0-skills .skill-label {
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 600;
   color: #fff;
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
 }
-
-.skill-label .percentage {
+.cont0-skills .percentuale-skills {
   font-size: 0.85rem;
   font-weight: 500;
   color: #ffffff;
@@ -587,16 +386,14 @@ font-size: 70px;
   min-width: 50px;
   text-align: right;
 }
-
-.skill-track {
+.cont0-skills .skill-track {
   background-color: #1b1b1b;
   height: 14px;
   border-radius: 100px;
   overflow: hidden;
   position: relative;
 }
-
-.skill-progress {
+.cont0-skills .skill-progress {
   height: 100%;
   width: 0;
   background: linear-gradient(120deg, rgba(41, 41, 41, 0.6), #bebebe, rgba(41, 41, 41, 0.6));
@@ -605,7 +402,6 @@ font-size: 70px;
   animation: moveStripe 2s linear infinite;
   transition: width 2s ease;
   position: relative;
-  /*box-shadow: 0 0 10px #00eaff99, 0 0 20px #00eaff55;*/
   box-shadow: 0 0 10px rgba(202, 202, 202, 0.6), 0 0 20px rgba(53, 53, 53, 0.3333333333);
 }
 
@@ -617,56 +413,28 @@ font-size: 70px;
     background-position: -200% 0;
   }
 }
-@media (max-width: 700px) {
-  /*.skills {
-    grid-template-columns: 1fr;
-  }*/
-}
 /* =====================================Sezione Progetti============================================ */
 #projects {
   background: linear-gradient(135deg, #1d1d1d, #2b2b2b);
-  padding: 100px 20px;
+  padding: 30px 20px;
   text-align: center;
   position: relative;
 }
 
-/*#projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}*/
 #h1-project {
   font-family: "Merriweather", serif;
   /*font-size: 2.8rem;*/
   font-weight: 700;
-  color: transparent; /* Rende il testo trasparente per applicare l'effetto */
-  background: rgba(231, 192, 107, 0.3); /* Colore oro traslucido per effetto vetro */
-  background-clip: text; /* Applica lo sfondo solo al testo */
-  -webkit-background-clip: text; /* Supporto per Webkit */
+  color: transparent;
+  background: rgba(231, 192, 107, 0.3);
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-bottom: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.2;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
-}
-
-.title-bg {
-  position: relative;
-  bottom: -110px;
-  left: -200px;
-  z-index: 0;
-  font-size: 9vw;
-  font-weight: 900;
-  color: #fff9c7;
-  opacity: 0.15;
-  pointer-events: none;
-  display: inline-block;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 .highlight {
@@ -690,7 +458,17 @@ font-size: 70px;
     left: 100%;
   }
 }
-/* ========================== SCROLL SECTION ========================== */
+/*---======Siti=====---*/
+/*---Dante---*/
+.logo-dante {
+  width: 90%;
+  height: auto;
+}
+.logo-dante .h3-dante {
+  color: blue;
+}
+
+/*---=====Container project=====---*/
 .scroll-wrapper {
   display: flex;
   z-index: 1;
@@ -702,15 +480,13 @@ font-size: 70px;
   border-right: 10px solid;
   -o-border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
      border-image: linear-gradient(to bottom, rgb(189, 188, 188), rgb(0, 0, 0), rgb(172, 172, 172)) 1;
-  /*border-top-right-radius: 20px; 
-  border-bottom-right-radius: 20px;*/
   display: flex;
   flex-direction: row;
   gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 1rem 0;
-  cursor: grab;
+  /*cursor: grab;*/
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -721,8 +497,7 @@ font-size: 70px;
   cursor: grabbing;
 }
 
-/* ========================== CARD STYLES ========================== */
-.card_1, .card {
+.card {
   flex: 0 0 auto;
   width: 50%;
   max-width: 200px;
@@ -736,18 +511,31 @@ font-size: 70px;
   justify-content: space-between;
   transform-style: preserve-3d;
   margin-right: 10px;
+  margin-left: 20px;
+}
+.card .p-cont21 {
+  color: white;
 }
 
 .card_1 {
   border-radius: 0px;
   width: 20%;
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 250px;
+  background: linear-gradient(to bottom right, #1a1a1a, #222);
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  margin-right: 10px;
 }
 
 #h2-cont21 {
-  color: white;
-}
-
-.p-cont21 {
   color: white;
 }
 
@@ -789,9 +577,6 @@ font-size: 70px;
   scrollbar-width: none;
 }
 
-/* =============================== */
-/* 📱 MEDIA QUERY per piccoli schermi */
-/* =============================== */
 @media (max-width: 768px) {
   #projects {
     padding: 60px 15px;
@@ -809,10 +594,10 @@ font-size: 70px;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-top: 30px; /* Ridurre la distanza tra il contenuto sinistro e scroll */
+    margin-top: 30px;
   }
   .scroll-container {
-    flex-direction: row; /* Mantenere la disposizione orizzontale */
+    flex-direction: row;
     overflow-x: scroll;
     gap: 1.5rem;
     padding: 8px;
@@ -837,9 +622,6 @@ font-size: 70px;
     font-size: 0.85rem;
   }
 }
-/* =============================== */
-/* 📱 MEDIA QUERY per schermi più piccoli */
-/* =============================== */
 @media (max-width: 480px) {
   #projects h2 {
     font-size: 1.7rem;
@@ -854,37 +636,14 @@ font-size: 70px;
   }
 }
 /* =====================================Sezione Contatti=============================================== */
-/* Sezione Contatti */
 #contact {
-  padding: 20px 20px;
+  padding: 30px 20px;
   background: linear-gradient(135deg, #1d1d1d, #2b2b2b);
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
-/*#contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}*/
-#contact h2 {
-  font-size: 3.5rem;
-  color: #fff;
-  margin-bottom: 40px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  animation: fadeInUp 1s ease-out;
-}
-
-/* Contenitore degli altri elementi visivi */
 .additional-elements {
   margin-bottom: 60px;
   text-align: center;
@@ -892,67 +651,44 @@ font-size: 70px;
   animation: fadeIn 1.5s ease-out;
 }
 
-/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.additional-elements h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #C59D5F; 
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}*/
 #h1-contact {
   font-family: "Merriweather", serif;
-  /*font-size: 2.8rem;*/
   font-weight: 700;
-  color: transparent; /* Rende il testo trasparente per applicare l'effetto */
-  background: rgba(231, 192, 107, 0.3); /* Colore oro traslucido per effetto vetro */
-  background-clip: text; /* Applica lo sfondo solo al testo */
-  -webkit-background-clip: text; /* Supporto per Webkit */
+  color: transparent;
+  background: rgba(231, 192, 107, 0.3);
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-bottom: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.2;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15); /* Ombra più delicata per contrasto */
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
-/*.p-tutti {
-  font-family: 'Merriweather', serif; 
-  font-size: 1.125rem; 
-  color: #ffffff; 
-  line-height: 1.8; 
-  text-align: justify; 
-  margin-bottom: 20px; 
-  letter-spacing: 0.5px; 
-  word-wrap: break-word; 
-  transition: color 0.3s ease, text-shadow 0.3s ease; 
-}
-
-.p-tutti:hover {
-  color: #ffffff; 
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); 
-}*/
 .p-tutti {
-  font-family: "Merriweather", serif; /* Elegante e con un tocco professionale */
-  /*font-size: 1.125rem;*/
-  color: #ffffff; /* Colore bianco lucente */
-  line-height: 1.8; /* Spaziatura tra le righe per una lettura fluida */
-  /*text-align: justify;*/
-  margin-bottom: 20px; /* Distanza tra i paragrafi */
-  letter-spacing: 0.5px; /* Aggiunge un po' di spazio tra le lettere */
-  word-wrap: break-word; /* Evita che le parole troppo lunghe fuoriescano */
+  font-family: "Merriweather", serif;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
   font-size: 15px;
+}
+
+/* Separatore visivo */
+.separator {
+  width: 100%;
+  height: 2px;
+  background: #333;
+  margin: 50px auto;
+  opacity: 0.7;
 }
 
 .cta-button {
   font-size: 1.2rem;
-  /*padding: 15px 30px;*/
-  background: linear-gradient(145deg, #1c1c1c, #3a3a3a); /* antracite sfumato */
+  background: linear-gradient(145deg, #1c1c1c, #3a3a3a);
   color: #fff;
-  /*border: 2px solid #FFD700; /* bordo oro */
   border-radius: 30px;
   margin-top: 30px;
   cursor: pointer;
@@ -966,21 +702,18 @@ font-size: 70px;
 
 .cta-button:hover {
   background-position: right center;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); /* glow dorato */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
 }
 
-/* Contenitore delle card di contatto */
 .contact-container {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
   animation: fadeIn 1.2s ease-out;
-  /*margin-bottom: 10px;*/
 }
 
-/* Card Contatto */
 .contact-card {
   background: #333;
   border-radius: 15px;
@@ -989,20 +722,32 @@ font-size: 70px;
   padding: 10px;
   width: 320px;
   height: auto;
-  /*height: 380px;*/
   position: relative;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: center;
   overflow: hidden;
 }
+.contact-card .h3-contact {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.contact-card .p-contact {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.contact-card .i-contact-icon {
+  font-size: 2rem;
+  color: #000000;
+  /*margin-bottom: 20px;*/
+  transition: color 0.3s ease-in-out;
+}
 
-/* Effetto hover per Card */
 .contact-card:hover {
   transform: scale(1.05);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 }
 
-/* Aggiunta bordo animato al passaggio del mouse */
 .contact-card:before {
   content: "";
   position: absolute;
@@ -1023,77 +768,11 @@ font-size: 70px;
   bottom: 0;
 }
 
-.contact-card i {
-  font-size: 2rem;
-  color: #000000;
-  /*margin-bottom: 20px;*/
-  transition: color 0.3s ease-in-out;
-}
-
-.contact-card:hover i {
+.contact-card:hover .i-contact-icon {
   color: #fff;
 }
 
-.contact-card h3 {
-  font-size: 1.7rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.contact-card p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/*.contact-card a {
-    font-size: 1.2rem;
-    color: #ff4161;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-    border: 2px solid #ff4161;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.contact-card a:hover {
-    color: #fff;
-    background: #ff4161;
-    border-color: #ff4161;
-    transform: translateY(-5px);
-}*/
-/* Animazioni */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Separatore visivo */
-.separator {
-  width: 100%;
-  height: 2px;
-  background: #333;
-  margin: 50px auto;
-  opacity: 0.7;
-}
-
-/* Effetti per le sfere in movimento */
+/*---=====sfere animate=====---*/
 .sphere-container {
   position: absolute;
   top: 0;

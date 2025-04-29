@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <title>Portfolio</title>
+    <link rel="icon" href="favicon/favicon.ico" type="image/png">
+
+    <title>Portfolio - A.B</title>
     <!--AOS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,26 +17,26 @@
   <main id="main-prin">
     <!-- Navbar -->
     <nav>
-      <div class="logo" data-aos="fade-right" data-aos-duration="1000">
-        <img src="logo/logo_1.png" alt="Your photo"> 
+      <div class="logo">
+        <img src="logo/logo_1.png" class="logo-nav" alt="Your photo"> 
       </div>
 
-      <div class="nav-container" data-aos="fade-down" data-aos-duration="1000">
+      <div class="nav-container">
         <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About Me</a>
-          <a href="#projects">Project</a>
-          <a href="#contact">Contact</a>
+          <a class="a-nav" href="#home">Home</a>
+          <a class="a-nav" href="#about">About Me</a>
+          <a class="a-nav" href="#projects">Project</a>
+          <a class="a-nav" href="#contact">Contact</a>
         </div>
       </div>
         <div class="menu-icon" onclick="toggleMenu()" data-aos="fade-left" data-aos-duration="1000">&#9776;</div>
     
         <!-- Mobile Navigation -->
 <div id="mobile-nav" class="mobile-nav">
-  <a href="#home">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#projects">Project</a>
-  <a href="#contact">Contact</a>
+  <a class="a-hamburger" href="#home">Home</a>
+  <a class="a-hamburger" href="#about">About Me</a>
+  <a class="a-hamburger" href="#projects">Project</a>
+  <a class="a-hamburger" href="#contact">Contact</a>
 </div>
 
       </nav>
@@ -50,12 +52,12 @@
         <!--Icone-->
     <div class="line"></div>
       <div class="tech-icons">
-        <i class="fab fa-html5" title="HTML5"></i>
-        <i class="fab fa-css3-alt" title="CSS3"></i>
-        <i class="fab fa-js" title="JavaScript"></i>
-        <i class="fab fa-react" title="React"></i>
-        <i class="fab fa-sass" title="SASS"></i>
-        <i class="fab fa-git-alt" title="Git"></i>
+        <i class="fab fa-html5 i-icone" title="HTML5"></i>
+        <i class="fab fa-css3-alt i-icone" title="CSS3"></i>
+        <i class="fab fa-js i-icone" title="JavaScript"></i>
+        <i class="fab fa-react i-icone" title="React"></i>
+        <i class="fab fa-sass i-icone" title="SASS"></i>
+        <i class="fab fa-git-alt i-icone" title="Git"></i>
       </div>
     </div>  
   </section>
@@ -81,12 +83,18 @@
 
       <div class="cont-about" >
         <h2 class="h2-about">Esperienze</h2>
-        <p class="p-tutti">Non ho avuto ancora l'occasione di lavorare con aziende o clienti, ma ho lavorato per conto mio, creando diversi progetti. Inoltre, la mia scuola attuale mi ha richiesto di collaborare con alcuni compagni per realizzare un progetto di gruppo. Questi lavori riflettono le competenze che ho acquisito durante il corso e il mio impegno nell'apprendimento pratico. Puoi trovare alcuni dei miei progetti nel mio portfolio.</p>
+        <p class="p-tutti">Non ho avuto ancora l'occasione di lavorare con aziende o clienti,
+           ma ho lavorato per conto mio, creando alcuni progetti. Inoltre, la mia scuola attuale 
+           mi ha richiesto di collaborare con alcuni compagni per realizzare un progetto di gruppo riguardando la Divina Commedia di Dante (<a href="https://hexion00.github.io/divinacommedia/" style="color: red;">La Divina Commedia di Dante </a>).
+            Questi lavori riflettono le competenze che ho acquisito durante il corso e il mio impegno 
+            nell'apprendimento pratico. Puoi trovare alcuni dei miei progetti nel mio portfolio.</p>
       </div>
 
       <div class="cont-about" >
         <h2 class="h2-about">Il mio lavoro</h2>
-        <p class="p-tutti">Puoi vedere il mio lavoro nel mio portfolio, che include progetti realizzati durante il mio percorso di formazione. Clicca su questo <a href="#projects" style="color: red;">Link</a> per esplorare i dettagli del progetto.</p>
+        <p class="p-tutti">Puoi vedere il mio lavoro nel mio portfolio, che include progetti realizzati 
+          durante il mio percorso di formazione. Clicca su questo <a href="#projects" style="color: red;">Link</a>
+           per esplorare i dettagli del progetto.</p>
       </div>
     </div>
         
@@ -100,9 +108,19 @@
       <div class="skill-bar">
         <div class="skill-label">
           <span>HTML</span>
-          <span class="percentage" data-progress="90">0%</span>
+          <span class="percentuale-skills" data-progress="100">0%</span>
         </div>
 
+        <div class="skill-track">
+          <div class="skill-progress" data-progress="100"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-label">
+          <span>CSS</span>
+          <span class="percentuale-skills" data-progress="90">0%</span>
+        </div>
         <div class="skill-track">
           <div class="skill-progress" data-progress="90"></div>
         </div>
@@ -110,36 +128,44 @@
 
       <div class="skill-bar">
         <div class="skill-label">
-          <span>CSS</span>
-          <span class="percentage" data-progress="85">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="85"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar">
-        <div class="skill-label">
           <span>JavaScript</span>
-          <span class="percentage" data-progress="75">0%</span>
+          <span class="percentuale-skills" data-progress="60">0%</span>
         </div>
         <div class="skill-track">
-          <div class="skill-progress" data-progress="75"></div>
+          <div class="skill-progress" data-progress="60"></div>
         </div>
       </div>
       <div class="skill-bar">
         <div class="skill-label">
           <span>Media Queries</span>
-          <span class="percentage" data-progress="70">0%</span>
+          <span class="percentuale-skills" data-progress="100">0%</span>
         </div>
         <div class="skill-track">
-          <div class="skill-progress" data-progress="70"></div>
+          <div class="skill-progress" data-progress="100"></div>
         </div>
       </div>
       <div class="skill-bar">
         <div class="skill-label">
           <span>SCSS</span>
-          <span class="percentage" data-progress="80">0%</span>
+          <span class="percentuale-skills" data-progress="100">0%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-progress" data-progress="100"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">
+          <span>C#</span>
+          <span class="percentuale-skills" data-progress="40">0%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-progress" data-progress="40"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">
+          <span>WordPress</span>
+          <span class="percentuale-skills" data-progress="80">0%</span>
         </div>
         <div class="skill-track">
           <div class="skill-progress" data-progress="80"></div>
@@ -147,11 +173,29 @@
       </div>
       <div class="skill-bar">
         <div class="skill-label">
-          <span>C#</span>
-          <span class="percentage" data-progress="60">0%</span>
+          <span>Bootstrap</span>
+          <span class="percentuale-skills" data-progress="80">0%</span>
         </div>
         <div class="skill-track">
-          <div class="skill-progress" data-progress="60"></div>
+          <div class="skill-progress" data-progress="80"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">
+          <span>AOS</span>
+          <span class="percentuale-skills" data-progress="80">0%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-progress" data-progress="80"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">
+          <span>GSAP</span>
+          <span class="percentuale-skills" data-progress="80">0%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-progress" data-progress="80"></div>
         </div>
       </div>
     </div>
@@ -165,18 +209,22 @@
       <p class="p-tutti">Qui trovi il mio playground digitale: progetti nati per sperimentare idee nuove...</p>
     </div>
 
-    <!--<div class="title-bg"><span class="highlight_1">Collections</span></div>-->
-
+    <!--Container project-->
+      <!--<div class="title-bg"><span class="highlight_1">Collections</span></div>-->
     <div class="scroll-wrapper" data-aos="fade-right" data-aos-duration="1000">
       <div class="card_1 highlight">
         <h2 id="h2-cont21">Project</h2>
-        <p class="p-cont21">Una raccolta dei progetti a cui ho lavorato, tra studio, sperimentazione e passione per il codice.</p>
+        <p class="p-cont21">Una raccolta dei progetti a cui ho lavorato, 
+          tra studio, sperimentazione e passione per il codice.</p>
       </div>
 
       <div class="scroll-container" id="scroll" data-aos="fade-up" data-aos-duration="1000">
         <div class="card" >
-          <h3>Divina Commedia di Dante</h3>
-          <p>Coming soon...</p>
+          <h3 class="h3-dante">Divina Commedia</h3>
+          <figure class="logo-dante">
+            <a href="https://hexion00.github.io/divinacommedia/"><img src="logo_siti/logo_divinaCommedia.png" class="img-dante" alt="Divina Commedia"></a>
+          </figure>
+          <p></p>
         </div>
 
         <div class="card">
@@ -206,7 +254,8 @@
   <section id="contact" data-aos="fade-up" data-aos-duration="1000">
     <div class="additional-elements">
       <h1 id="h1-contact">Hai un progetto in mente?</h1>
-      <p class="p-tutti">Se vuoi discutere di un'idea o lavorare insieme su qualcosa di innovativo, non esitare a metterti in contatto con me. Sono sempre entusiasta di nuove sfide!</p>
+      <p class="p-tutti">Se vuoi discutere di un'idea o lavorare insieme su qualcosa di innovativo,
+         non esitare a metterti in contatto con me. Sono sempre entusiasta di nuove sfide!</p>
     </div>
 
     <!-- Separatore visivo -->
@@ -216,33 +265,34 @@
           
       <!-- Email -->
       <div class="contact-card" data-aos="fade-right" data-aos-duration="1200">
-        <h3>Email</h3>
-        <p>Scrivimi una mail per ogni tua richiesta o domanda!</p>
+        <h3 class="h3-contact">Email</h3>
+        <p class="p-contact">Scrivimi una mail per ogni tua richiesta o domanda!</p>
           <button class="cta-button" onclick="window.location.href='mailto:alexwebdev.it@gmail.com'">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope i-contact-icon"></i>
           </button>
       </div>
         
       <!-- Telefono -->
       <div class="contact-card" data-aos="fade-up" data-aos-duration="1200">
-        <h3>Telefono</h3>
-        <p>Per una comunicazione diretta, chiamami subito!</p>
+        <h3 class="h3-contact">Telefono</h3>
+        <p class="p-contact">Per una comunicazione diretta, chiamami subito!</p>
           <button class="cta-button" onclick="window.location.href='tel:+393342721529'">
-            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-phone-alt i-contact-icon"></i>
           </button>
       </div>
         
       <!-- Social -->
       <div class="contact-card" data-aos="fade-left" data-aos-duration="1200"> 
-        <h3>Social</h3>
-        <p>Connettiti con me sui social per rimanere aggiornato!</p>
+        <h3 class="h3-contact">Social</h3>
+        <p class="p-contact">Connettiti con me sui social per rimanere aggiornato!</p>
         <!--<button class="cta-button" onclick="window.open('https://www.linkedin.com/in/tuo-profilo', '_blank')">LinkedIn</button>-->
         <button class="cta-button" onclick="window.open('https://github.com/tuo-account', '_blank')">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-github i-contact-icon"></i>
         </button>
       </div>
     </div>
-        
+       
+    <!--Sfere animate-->
     <div class="sphere-container">
       <div class="sphere"></div>
       <div class="sphere"></div>
