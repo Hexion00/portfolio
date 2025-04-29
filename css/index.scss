@@ -178,8 +178,7 @@ hr{border:none; border-bottom: 1px solid #ddd}
   }  
 }
 
-  
-  nav {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -194,13 +193,12 @@ hr{border:none; border-bottom: 1px solid #ddd}
 }
 
 .logo-nav {
-width: 50px;
-height: 50px;
-border-radius: 50%;  
-object-fit: cover; 
-display: block; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  
+  object-fit: cover; 
+  display: block; 
 }
-
 
 .nav-links {
   display: flex;
@@ -208,67 +206,73 @@ display: block;
   font-size: 18px;
   font-weight: 500;
   color: white;
+}
 
-  .a-nav {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-  }
+.a-nav {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 /* Menu Hamburger */
 .menu-icon {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    margin-right: 10px;
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .mobile-nav {
-    position: fixed;
-    left: -300px;
-    top: 0;
-    height: 100%;
-    background:rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
-    width: 250px;
-    transition: all 0.3s ease;
-    padding: 50px 20px;
-    z-index: 999;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
+  width: 250px;
+  transition: all 0.3s ease;
+  padding: 50px 20px;
+  z-index: 999;
+}
 
-    .active {
-      left: 0;
-    }
-
-      .a-hamburger {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        margin: 20px 0;
-        transition: color 0.3s ease;
-      }
+.mobile-nav .a-hamburger {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0;
+  transition: color 0.3s ease;
 }
 
 .mobile-nav a:hover {
-    color: #5a5954;
+  color: #5a5954;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .nav-container {
-        display: none;
-    }
+  .menu-icon {
+    display: block;
+  }
 
-    .menu-icon {
-        display: block;
-    }
+  .nav-links {
+    display: none; /* Nascondi il menu di navigazione principale su mobile */
+  }
 }
+
+#mobile-nav.active {
+  left: 0;
+}
+
 
 /* ------------------------------------------Sezione Chi Sono-------------------------------------------- */
 #about {

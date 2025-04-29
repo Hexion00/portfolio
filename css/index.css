@@ -225,7 +225,8 @@ nav {
   font-weight: 500;
   color: white;
 }
-.nav-links .a-nav {
+
+.a-nav {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
@@ -255,9 +256,7 @@ nav {
   padding: 50px 20px;
   z-index: 999;
 }
-.mobile-nav .active {
-  left: 0;
-}
+
 .mobile-nav .a-hamburger {
   display: block;
   color: white;
@@ -274,12 +273,21 @@ nav {
 /* Media Queries */
 @media (max-width: 768px) {
   .nav-container {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .menu-icon {
     display: block;
   }
+  .nav-links {
+    display: none; /* Nascondi il menu di navigazione principale su mobile */
+  }
 }
+#mobile-nav.active {
+  left: 0;
+}
+
 /* ------------------------------------------Sezione Chi Sono-------------------------------------------- */
 #about {
   padding: 0px 20px;
