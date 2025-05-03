@@ -522,7 +522,7 @@ nav ul li a:hover {
 .p_about {
   font-size: 1rem;
   color: #bbb;
-  text-align: justify; /* Giustifica il testo */
+  /*text-align: justify; */ /* Giustifica il testo */
 }
 
 /* Aggiungere una leggera animazione ai link */
