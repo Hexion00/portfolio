@@ -490,17 +490,6 @@ nav ul li a:hover {
   transform-origin: bottom left;
 }
 
-.about-right p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #ccc;
-  transition: color 0.3s ease;
-}
-
-.about-right p:hover {
-  color: #fff;
-}
-
 /* Card degli studi con hover */
 .studies-container {
   display: flex;
@@ -534,10 +523,6 @@ nav ul li a:hover {
   font-size: 1rem;
   color: #bbb;
   text-align: justify; /* Giustifica il testo */
-  line-height: 1.6; /* Spaziatura tra le righe */
-  letter-spacing: 0.5px; /* Spaziatura tra le lettere */
-  word-spacing: 1px; /* Spaziatura tra le parole */
-  margin-bottom: 1.5em; /* Spazio sotto al paragrafo */
 }
 
 /* Aggiungere una leggera animazione ai link */
