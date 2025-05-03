@@ -467,6 +467,7 @@ nav ul li a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .h2_about::after {
@@ -514,18 +515,23 @@ nav ul li a:hover {
   color: #fff;
 }*/
 
-.study h3 {
+/*.study h3 {
   font-size: 1.3rem;
   margin-bottom: 8px;
   font-weight: 600;
-}
+}*/
 
 .p_about {
-  font-size: 1rem;
+  font-size: clamp(16px, 4vw, 19px);
   color: #bbb;
 
 
-  /*text-align: justify; */      /* Giustifica il testo */
+  
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.6;
+
+        /* Giustifica il testo */
 
 }
 
