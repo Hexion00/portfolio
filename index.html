@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="favicon/favicon.ico" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <title>Portfolio - A.B</title>
     <!--AOS -->
@@ -64,11 +68,116 @@
   
   <!-- Sezione Chi sono -->
   <section id="about" data-aos="fade-up" data-aos-duration="1000">
+
+
+
     <div class="about-container_21">
       <div class="about-img">
         <img src="logo/logo_1.png" alt="About Me">
       </div>
     </div>
+
+
+
+
+
+
+   
+ 
+  
+    <div class="container">
+      <section id="about_1">
+        <div >
+
+          <figure class="figure-left">
+          <img src="img/img-eu.jpg"  id="img-about" alt="Foto Profilo">
+          </figure>
+          
+          <section class="section-skills">
+            <h3>Skills</h3>
+            <div class="button-container">
+              <button class="show-skills-btn"><span>Mostra skills</span></button>
+              <button class="close-skills-btn"><span>Nascondi skills</span></button>
+            </div>
+          
+            <div class="skills-scrollable">
+              <section id="skills">
+                <div class="skills-container">
+                  <div class="skills-left">
+                    <div class="skill"><i class="fab fa-html5"></i><span> HTML5</span></div>
+                    <div class="skill"><i class="fab fa-css3-alt"></i><span> CSS3</span></div>
+                    <div class="skill"><i class="fab fa-js-square"></i><span> JavaScript</span></div>
+                    <div class="skill"><i class="fab fa-bootstrap"></i><span> Bootstrap</span></div>
+                    <div class="skill"><i class="fab fa-sass"></i><span> SCSS</span></div>
+                    <div class="skill"><i class="fab fa-figma"></i><span> Figma</span></div>
+                  </div>
+                  <div class="skills-right">
+                    <div class="skill"><i class="fab fa-wordpress"></i><span> WordPress</span></div>
+                    <div class="skill"><i class="fab fa-react"></i><span> React</span></div>
+                    <div class="skill"><i class="fas fa-laptop-code"></i><span> Media Queries</span></div>
+                    <div class="skill"><i class="fab fa-js-square"></i><span> GSAP</span></div>
+                    <div class="skill"><i class="fab fa-git-alt"></i><span> Git</span></div>
+                    <div class="skill"><i class="fab fa-figma"></i><span> Figma</span></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          
+
+
+
+
+        </div>
+
+        
+  
+        <div class="about-right">
+          <div class="container_about">
+          <h2 class="h2_about">Chi Sono</h2>
+          <p class="p_about">Mi chiamo Boghian Alexandru Constantin e sono uno sviluppatore web con una forte 
+            passione per il design e la tecnologia. Mi dedico alla creazione di esperienze digitali 
+            moderne e accessibili, con un focus su soluzioni funzionali e facili da usare. Prestando 
+            attenzione ai dettagli, cerco sempre di garantire un equilibrio tra estetica e usabilità. 
+            Sono motivato a affrontare nuove sfide per crescere professionalmente e migliorare costantemente 
+            nel mio lavoro.</p>
+          </div>
+
+          <div class="container_about">
+          <h2 class="h2_about">Formazione</h2>
+          <div class="studies-container">
+            <div class="study">
+              <h3>Forte Chance</h3>
+              <p>Corso Web Developer (600h)<br>Dicembre 2023 – Giugno 2024</p>
+            </div>
+            <div class="study">
+              <h3>Ettore Majorana</h3>
+              <p>Corso serale in Informatica<br>Settembre 2024 – In corso</p>
+            </div>
+          </div>
+          </div>
+  
+          <div class="container_about">
+            <h2 class="h2_about">Il Mio Lavoro</h2>
+            <p class="p_about">Ho sviluppato un sito web sulla Divina Commedia di Dante, come parte di un lavoro di 
+              gruppo assegnato dalla scuola a me e ad alcuni compagni. In questo progetto, ho avuto 
+              l'opportunità di mettere in pratica le competenze acquisite durante la mia formazione, 
+              collaborando con il team per creare una piattaforma interattiva e ben strutturata. 
+              Sebbene non abbia ancora lavorato con clienti o aziende, questa esperienza mi ha 
+              permesso di affrontare sfide reali e di applicare soluzioni pratiche in un contesto collaborativo.</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+    
+
+    <!--
     <div class="about-info">
       <div class="cont-about" >
         <h2 class="h2-about">Chi sono</h2>
@@ -100,106 +209,12 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        
+  -->
     <!--SKILLS-->
-    <div class="cont0-skills" data-aos="fade-up" data-aos-duration="1000">
-    <h1 id="h1-skills">Skills</h1>   
-    <div class="skills" id="skillsSection"  >
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>HTML</span>
-          <span class="percentuale-skills" data-progress="100">0%</span>
-        </div>
-
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="100"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>CSS</span>
-          <span class="percentuale-skills" data-progress="90">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="90"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>JavaScript</span>
-          <span class="percentuale-skills" data-progress="60">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="60"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>Media Queries</span>
-          <span class="percentuale-skills" data-progress="100">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="100"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>SCSS</span>
-          <span class="percentuale-skills" data-progress="100">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="100"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>C#</span>
-          <span class="percentuale-skills" data-progress="40">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="40"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>WordPress</span>
-          <span class="percentuale-skills" data-progress="80">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="80"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>Bootstrap</span>
-          <span class="percentuale-skills" data-progress="80">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="80"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>AOS</span>
-          <span class="percentuale-skills" data-progress="80">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="80"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-label">
-          <span>GSAP</span>
-          <span class="percentuale-skills" data-progress="80">0%</span>
-        </div>
-        <div class="skill-track">
-          <div class="skill-progress" data-progress="80"></div>
-        </div>
-      </div>
-    </div>
-    </div>
+  
+ 
+  
+   
   </section>
 
   <!-- Sezione Progetti -->

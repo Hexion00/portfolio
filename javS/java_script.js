@@ -45,52 +45,77 @@ type();
 
 
 
-  /*---=====bara delle percentuali=====---*/
-  
-  // Funzione per avviare l'animazione delle barre di progresso
-  function startAnimation() {
-    const progressBars = document.querySelectorAll(".skill-progress");
-    const percentages = document.querySelectorAll(".percentuale-skills");
+/*---=====skills=====---*/
+const showSkillsBtn = document.querySelector('.show-skills-btn');
+const closeSkillsBtn = document.querySelector('.close-skills-btn');
+const skillsSection = document.querySelector('#skills');
+const skills = document.querySelectorAll('.skill');
 
-    progressBars.forEach((bar, index) => {
-      const value = parseInt(bar.getAttribute("data-progress"));
-      const percentLabel = percentages[index];
-      let current = 0;
+function openSkillsSection() {
+  skillsSection.style.visibility = "visible";
+  skillsSection.style.height = "auto";
+  skillsSection.style.opacity = "1";
+  skillsSection.style.overflow = "visible";
 
-      // Anima la barra
-      setTimeout(() => {
-        bar.style.width = value + "%";
-      }, 100);
+  const btnRect = showSkillsBtn.getBoundingClientRect();
 
-      // Anima il conteggio della percentuale
-      const updateCount = () => {
-        if (current < value) {
-          current++;
-          percentLabel.textContent = current + "%";
-          requestAnimationFrame(updateCount);
-        } else {
-          percentLabel.textContent = value + "%";
-        }
-      };
+  skills.forEach((skill, index) => {
+    const skillRect = skill.getBoundingClientRect();
 
-      requestAnimationFrame(updateCount);
-    });
-  }
-
-  // Intersection Observer per scoprire quando la sezione diventa visibile
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Avvia l'animazione delle barre quando la sezione diventa visibile
-        startAnimation();
-        observer.disconnect(); // Disconnette l'osservatore dopo l'animazione
+    gsap.fromTo(skill,
+      {
+        x: btnRect.left - skillRect.left,
+        y: btnRect.top - skillRect.top,
+        scale: 0.3,
+        opacity: 0
+      },
+      {
+        x: 0,
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2 + index * 0.08,
+        ease: "power3.out"
       }
-    });
-  }, { threshold: 0.5 });
+    );
+  });
 
-  // Osserva la sezione delle competenze
-  const skillsSection = document.getElementById("skillsSection");
-  observer.observe(skillsSection);
+  showSkillsBtn.style.display = "none";
+  closeSkillsBtn.style.display = "inline-block";
+}
+
+function closeSkillsSection() {
+  skills.forEach((skill, index) => {
+    gsap.to(skill, {
+      scale: 0.5,
+      opacity: 0,
+      duration: 0.4,
+      delay: index * 0.05,
+      ease: "power2.in"
+    });
+  });
+
+  gsap.to(skillsSection, {
+    height: 0,
+    opacity: 0,
+    duration: 0.6,
+    delay: 0.4,
+    ease: "power2.inOut",
+    onComplete: () => {
+      skillsSection.style.visibility = "hidden";
+      skillsSection.style.overflow = "hidden";
+      showSkillsBtn.style.display = "inline-block";
+      closeSkillsBtn.style.display = "none";
+    }
+  });
+}
+
+showSkillsBtn.addEventListener('click', openSkillsSection);
+closeSkillsBtn.addEventListener('click', closeSkillsSection);
+
+
+ 
 
   /*---=====AOS=====---*/
   AOS.init();
