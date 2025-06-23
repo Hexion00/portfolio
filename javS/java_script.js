@@ -9,39 +9,18 @@ function toggleMenu() {
     
 
 /*---=====codice del header=====---*/
-const phrases = [
-  "Web Developer",
-  "Front-End",
-  "UI Minimalista",
-  "Codice leggibile"
-];
-
-let j = 0;
-let currentPhrase = 0;
-const magicText = document.getElementById('magic-text');
-
-function type() {
-  if (j < phrases[currentPhrase].length) {
-    magicText.textContent += phrases[currentPhrase][j];
-    j++;
-    setTimeout(type, 90);
-  } else {
-    setTimeout(erase, 2000);
-  }
-}
-
-function erase() {
-  if (j > 0) {
-    magicText.textContent = phrases[currentPhrase].substring(0, j - 1);
-    j--;
-    setTimeout(erase, 40);
-  } else {
-    currentPhrase = (currentPhrase + 1) % phrases.length;
-    setTimeout(type, 400);
-  }
-}
-
-type();
+ // Testo che si scrive da solo
+    const text = 'Web Developer | Front-End | UI/UX';
+    let index = 0;
+    function typeText() {
+      const el = document.getElementById("typing-text");
+      if (index < text.length) {
+        el.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 80);
+      }
+    }
+    window.onload = typeText;
 
 
 

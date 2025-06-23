@@ -2,22 +2,23 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="favicon/favicon.ico" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <title>Portfolio - A.B</title>
-    <!--AOS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="favicon/favicon.ico" type="image/png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!--AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Portfolio - A.B</title>
 </head>
 
 <body>
+
   <main id="main-prin">
     <!-- Navbar -->
     <nav>
@@ -47,49 +48,178 @@
 
   <!-- Sezione Home -->
   <section id="home" class="home-section"> 
-    <div class="hero">
-      <h1 class="magic-title">Portfolio / Front-End</h1>
-    <div class="con-h1-type">
-      <h1 class="typewriter" id="magic-text"></h1>
+
+    <section class="container_54">
+      <!-- Sezione sinistra -->
+      <div class="left">
+        <div class="hero">
+          <div class="container_magic">
+            <h1 class="pulse-title_1">FrontLine</h1>
+              <div class="con-h1-type">
+                <!--<h1 class="typewriter" id="magic-text"></h1>-->
+                 <p class="typing-placeholder" id="typing-text"></p>
+                 
+              </div>
+              <div class="intro-paragraph">
+  <p>Sviluppo interfacce web curate e funzionali, con attenzione ai dettagli e all’esperienza utente, per supportare progetti digitali di qualità.</p>
+</div>
+
+              <!--<div class="decor-line"></div>-->
+                <a href="#about"><button  class="btn" data-aos="fade-down" data-aos-duration="1000">Chi sono?</button></a>
+          
+
+
+<div class="visual-wrapper">
+  <div class="visual-element">
+    <i class="fas fa-code"></i>
+  </div>
+  <div class="visual-element">
+    <i class="fas fa-laptop-code"></i>
+  </div>
+  <div class="visual-element">
+    <i class="fas fa-bolt"></i>
+  </div>
+  <div class="visual-element">
+    <i class="fas fa-rocket"></i>
+  </div>
+</div>
+
+                
+
+
+<style>
+  .visual-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.visual-element {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #111;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px #222 inset;
+}
+
+/*.visual-element:hover {
+  transform: scale(1.3);
+}*/
+
+.visual-element::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #979696;
+  border-right-color: #979696;
+  animation: spin 2s linear infinite;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/*.visual-element:hover::before {
+  border-top-color: #80deea;
+  border-right-color: #26c6da;
+}*/
+
+.visual-element i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 28px;
+  color: #666666;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/*.visual-element:hover i {
+  color: #26c6da;
+}*/
+
+@keyframes spin {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+</style>
+
+
+              </div>
+            
+              
+            </div> 
+
+
     </div>
-        <a href="#about"><button  class="btn" data-aos="fade-down" data-aos-duration="1000">Scopri di più</button></a>
-        <!--Icone-->
-    <div class="line"></div>
-      <div class="tech-icons">
-        <i class="fab fa-html5 i-icone" title="HTML5"></i>
-        <i class="fab fa-css3-alt i-icone" title="CSS3"></i>
-        <i class="fab fa-js i-icone" title="JavaScript"></i>
-        <i class="fab fa-react i-icone" title="React"></i>
-        <i class="fab fa-sass i-icone" title="SASS"></i>
-        <i class="fab fa-git-alt i-icone" title="Git"></i>
-      </div>
-    </div>  
+
+
   </section>
+
+
+    
+
+
+  </section>
+
+  <style>
+      .intro-paragraph {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: aliceblue;
+  }
+  </style>
+
+
+
+
+  
+
+
+
+
+
   
   <!-- Sezione Chi sono -->
   <section id="about" data-aos="fade-up" data-aos-duration="1000">
+
+      <div class="container_65">
+    <h1>Aboute Me</h1>
+    <div class="divider"></div>
+  </div>
     
-    <div class="about-container_21">
+    <!--<div class="about-container_21">
       <div class="about-img">
         <img src="logo/logo_1.png" alt="About Me">
       </div>
-    </div>
+    </div>-->
 
-    <div class="additional-elements">
-      <h1 id="h1-contact">La mia carriera nel web</h1>
-      <p class="p-tutti">Sono un web developer appassionato, sempre impegnato 
-        a migliorare le mie competenze per creare esperienze digitali moderne e funzionali.</p>
-    </div>
+
 
     <!-- Separatore visivo -->
-    <div class="separator"></div>
+    <!--<div class="separator"></div>-->
 
     <div class="container">
       <section id="about_1">
 
         <div class="container_skills">
           <figure class="figure-left">
-          <img src="img-mie/img_profil_1.jpg"  id="img-about" alt="Foto Profilo">
+          <img src="logo/logo_1.png"  id="img-about" alt="Foto Profilo">
           </figure>
           
           <section class="section-skills">
@@ -165,95 +295,195 @@
 
   <!-- Sezione Progetti -->
   <section id="projects" data-aos="fade-up" data-aos-duration="1000">
-    <div class="additional-elements">
-      <h1 id="h1-contact">Esperienze di sviluppo</h1>
-      <p class="p-tutti">In questa sezione trovi alcuni dei miei progetti, 
-        che riflettono il mio impegno e la crescita nel web development.</p>
+
+          <div class="container_65">
+    <h1>Project</h1>
+    <div class="divider"></div>
+  </div>
+
+
+    <div class="cta-container">
+    <p class="cta-text">Ecco alcuni progetti recenti. Vuoi saperne di più? Contattami!</p>
+    <a href="#about"><button  class="btn">Contact</button></a>
+  </div>
+
+    <div class="text-below">
+      <!--<h2 class="folder-title">“Selected Projects & Highlights”</h2>-->
+      <h2 class="pulse-title">Work</h2>
     </div>
 
-    <!-- Separatore visivo -->
-    <div class="separator"></div>
+      <div class="scroll-wrapper">
+      <div class="scroll-container" id="scroll">
 
-    <!--Container project-->
-      <!--<div class="title-bg"><span class="highlight_1">Collections</span></div>-->
-    <div class="scroll-wrapper" data-aos="fade-right" data-aos-duration="1000">
-      <div class="card_1 highlight">
-       
-      </div>
 
-      <div class="scroll-container" id="scroll" data-aos="fade-up" data-aos-duration="1000">
-        <div class="card" >
-          <h3 class="h3-dante">Divina Commedia</h3>
-          <figure class="logo-dante">
-            <a href="https://hexion00.github.io/divinacommedia/"><img src="logo_siti/logo_divinaCommedia.png" class="img-dante" alt="Divina Commedia"></a>
-          </figure>
-          <p></p>
-        </div>
+        
 
-        <div class="card">
-          <h3>Project</h3>
-          <p>Coming soon...</p>
-        </div>
+        
+<!-- Card progetto reale -->
+<div class="project-card modern-card">
+  <div class="card-image">
+    <img src="logo_siti/logo_divinaCommedia.png" alt="Divina Commedia" />
+  </div>
+  <div class="card-content">
+    <h3>Divina Commedia</h3>
+    <p>Un viaggio visivo e interattivo tra Inferno, Purgatorio e Paradiso.</p>
+    <a href="https://hexion00.github.io/divinacommedia/" target="_blank">Esplora il progetto</a>
+  </div>
+</div>
 
-        <div class="card">
-          <h3>Project</h3>
-          <p>Coming soon...</p>
-        </div>
+<!-- Placeholder card -->
+<div class="project-card placeholder-modern">
+  <div class="placeholder-inner">
+    <span class="dot-pulse"></span>
+    <h4>Progetto in arrivo</h4>
+    <p>Work in progress...</p>
+  </div>
+</div>
 
-        <div class="card">
-          <h3>Project</h3>
-          <p>Coming soon...</p>
-        </div>
+<!-- Altre placeholder -->
+<div class="project-card placeholder-modern">
+  <div class="placeholder-inner">
+    <span class="dot-pulse"></span>
+    <h4>Progetto in arrivo</h4>
+    <p>Work in progress...</p>
+  </div>
+</div>
 
-        <div class="card">
-          <h3>Project</h3>
-          <p>Coming soon...</p>
-        </div>
+<div class="project-card placeholder-modern">
+  <div class="placeholder-inner">
+    <span class="dot-pulse"></span>
+    <h4>Progetto in arrivo</h4>
+    <p>Work in progress...</p>
+  </div>
+</div>
+
+<div class="project-card placeholder-modern">
+  <div class="placeholder-inner">
+    <span class="dot-pulse"></span>
+    <h4>Progetto in arrivo</h4>
+    <p>Work in progress...</p>
+  </div>
+</div>
+
+<div class="project-card placeholder-modern">
+  <div class="placeholder-inner">
+    <span class="dot-pulse"></span>
+    <h4>Progetto in arrivo</h4>
+    <p>Work in progress...</p>
+  </div>
+</div>
+
       </div>
     </div>
+
+
+
+
+    
   </section>
+
+
+
+
 
   <!-- Sezione Contatti -->
   <section id="contact" data-aos="fade-up" data-aos-duration="1000">
-    <div class="additional-elements">
-      <h1 id="h1-contact">Hai un progetto in mente?</h1>
-      <p class="p-tutti">Se vuoi discutere di un'idea o lavorare insieme su qualcosa di innovativo,
-         non esitare a metterti in contatto con me. Sono sempre entusiasta di nuove sfide!</p>
+
+          <div class="container_65">
+    <h1>Contact Me</h1>
+    <div class="divider"></div>
+  </div>
+    
+
+     <section class="contact-section">
+
+    <div class="main_container">  
+    <p class="p_contact">Attualmente sono alla ricerca di nuove opportunità come Web Developer. 
+      Se il mio profilo ti ha colpito e pensi che potrei essere la persona giusta 
+      per il tuo team, non esitare a contattarmi. Sarò felice di parlarne.</p>
     </div>
 
-    <!-- Separatore visivo -->
-    <div class="separator"></div>
 
-    <div class="contact-container">
-          
-      <!-- Email -->
-      <div class="contact-card" data-aos="fade-right" data-aos-duration="1200">
-        <h3 class="h3-contact">Email</h3>
-        <p class="p-contact">Scrivimi una mail per ogni tua richiesta o domanda!</p>
-          <button class="cta-button" onclick="window.location.href='mailto:alexwebdev.it@gmail.com'">
-            <i class="fas fa-envelope i-contact-icon"></i>
-          </button>
+    <div class="card-container">
+
+      <style>
+.main_container {
+  background: rgba(255, 255, 255, 0.05); /* trasparenza leggera */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+
+
+.p_contact {
+  text-align: center;
+  
+  font-size: 1.1rem;    /* leggermente più leggibile, opzionale */
+  line-height: 1.6;     /* migliora la leggibilità del paragrafo */
+       /* evita righe troppo lunghe su schermi larghi */
+  /*margin-left: auto;
+  margin-right: auto;*/
+  color: #ffffff;          /* colore più morbido del nero pieno */
+}
+
+
+      </style>
+
+      <!-- Card 1: Email -->
+      <div class="contact-card">
+        <div class="card-image">
+          <img src="img-mie/anton-sobotyak-K_PfDu_z45M-unsplash.jpg" alt="Email Icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Email</h3>
+          <p class="card-text">Hai un'idea o un progetto? Scrivimi, rispondo in meno di 24 ore.</p>
+          <a href="mailto:tuamail@example.com" class="contact-button">Scrivimi</a>
+        </div>
       </div>
-        
-      <!-- Telefono -->
-      <div class="contact-card" data-aos="fade-up" data-aos-duration="1200">
-        <h3 class="h3-contact">Telefono</h3>
-        <p class="p-contact">Per una comunicazione diretta, chiamami subito!</p>
-          <button class="cta-button" onclick="window.location.href='tel:+393342721529'">
-            <i class="fas fa-phone-alt i-contact-icon"></i>
-          </button>
+
+      <!-- Card 3: Telefona -->
+<div class="contact-card">
+  <div class="card-image">
+    <img src="img-mie/anton-sobotyak-K_PfDu_z45M-unsplash.jpg" alt="Telefono Icon">
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">Chiamami</h3>
+    <p class="card-text">Hai bisogno di parlarmi subito? Sentiamoci al telefono per una consulenza diretta e veloce.</p>
+    <a href="tel:+391234567890" class="contact-button">Chiama</a>
+  </div>
+</div>
+
+      <!-- Card 2: LinkedIn -->
+      <div class="contact-card">
+        <div class="card-image">
+          <img src="img-mie/anton-sobotyak-K_PfDu_z45M-unsplash.jpg" alt="LinkedIn Icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">LinkedIn</h3>
+          <p class="card-text">Connettiti con me per vedere il mio percorso, articoli e progetti aggiornati.</p>
+          <a href="https://www.linkedin.com/in/tuonome" target="_blank" class="contact-button">LinkedIn</a>
+        </div>
       </div>
-        
-      <!-- Social -->
-      <div class="contact-card" data-aos="fade-left" data-aos-duration="1200"> 
-        <h3 class="h3-contact">Social</h3>
-        <p class="p-contact">Connettiti con me sui social per rimanere aggiornato!</p>
-        <!--<button class="cta-button" onclick="window.open('https://www.linkedin.com/in/tuo-profilo', '_blank')">LinkedIn</button>-->
-        <button class="cta-button" onclick="window.open('https://github.com/Hexion00')">
-          <i class="fab fa-github i-contact-icon"></i>
-        </button>
-      </div>
+
+
+
+
     </div>
+  </section>
+
+
+
+
+
+
+
        
     <!--Sfere animate-->
     <div class="sphere-container">
@@ -262,6 +492,33 @@
       <div class="sphere"></div>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
