@@ -11,15 +11,6 @@ hr{border:none; border-bottom: 1px solid #ddd}
 
 
 
-
-
-
-
-
-#main-prin {
-  overflow-x: clip;
-}
-
 /*codice del header*/
 /*variabili css*/
 :root {
@@ -32,10 +23,9 @@ hr{border:none; border-bottom: 1px solid #ddd}
   --hover-shadow: 0 0 25px rgba(0, 255, 247, 0.1);
 }
 
-
-
-
-
+#main-prin {
+  overflow-x: clip;
+}
 
 .container_magic{
   /*margin-bottom: 100px;*/
@@ -45,7 +35,7 @@ hr{border:none; border-bottom: 1px solid #ddd}
 }
 
 
-  .luxury-lineup {
+.luxury-lineup {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
@@ -55,37 +45,6 @@ hr{border:none; border-bottom: 1px solid #ddd}
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #d4af37;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -122,16 +81,84 @@ hr{border:none; border-bottom: 1px solid #ddd}
 }
 
 
+/*---=====NavBar=====---*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  /*background-color: #333333;*/
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  
+  object-fit: cover; 
+  display: block; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.a-nav {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #8b8b8b;
+}
+
+/* Menu Hamburger */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.mobile-nav {
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
+  width: 250px;
+  transition: all 0.3s ease;
+  padding: 50px 20px;
+  z-index: 999;
+}
+
+.mobile-nav .a-hamburger {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #5a5954;
+}
 
 
 
-
-
-
-
-
-
-
+/*---=====Pulsante=====---*/
 .btn {
   position: relative;
   display: inline-block;
@@ -177,119 +204,6 @@ hr{border:none; border-bottom: 1px solid #ddd}
 
 
 
-
-
-
-
-/* Media queries */
-@media (max-width: 768px) {
-
-
-  .btn {
-    padding: 0.6rem 1.8rem;
-  }
-
-  .line {
-    width: 90%;
-  }
-
-  .con-h1-type{
-    height: 50px;
-    /*margin-bottom: 100px;*/
-  }  
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  /*background-color: #333333;*/
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.logo-nav {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;  
-  object-fit: cover; 
-  display: block; 
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-  font-size: 18px;
-  font-weight: 500;
-  color: white;
-}
-
-.a-nav {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #f1c40f;
-}
-
-/* Menu Hamburger */
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.mobile-nav {
-  position: fixed;
-  left: -300px;
-  top: 0;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
-  width: 250px;
-  transition: all 0.3s ease;
-  padding: 50px 20px;
-  z-index: 999;
-}
-
-.mobile-nav .a-hamburger {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 20px 0;
-  transition: color 0.3s ease;
-}
-
-.mobile-nav a:hover {
-  color: #5a5954;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    display: none; /* Nascondi il menu di navigazione principale su mobile */
-  }
-}
-
 #mobile-nav.active {
   left: 0;
 }
@@ -308,14 +222,14 @@ nav {
 /* Sinistra */
 .left {
   width: 100%;
-  background-color: #000000; /* blu */
+  background-color: #000000; 
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 2rem;
   font-family: sans-serif;
-  position: relative; /* necessario per il cerchio assoluto */
+  position: relative; 
 }
 
 
@@ -325,39 +239,36 @@ nav {
   font-size: clamp(3.7rem, 10vw, 6rem);
   font-weight: 900;
   text-transform: uppercase;
-  background: linear-gradient(120deg, #ffffff, #999999, #444444); /* termina in oro */
-  /*background-size: 300% 300%;*/
+  background: linear-gradient(120deg, #ffffff, #999999, #444444);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /*animation: pulseFlow 12s ease-in-out infinite;*/
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  font-family: 'Segoe UI', sans-serif; /* più moderno */
+  font-family: 'Segoe UI', sans-serif; 
 }
 
 
-    @keyframes pulseFlow {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
+@keyframes pulseFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
 
 
 
-    .decor-line {
-      width: 50%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #fff, transparent);
-      margin: 2rem auto;
-    }
+.decor-line {
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  margin: 2rem auto;
+}
 
-    .typing-placeholder {
-    font-size: 1.3rem;
-    font-weight: 900;
-    opacity: 0.8;
-    margin: 1rem 0 2rem;
-    /*padding-bottom: 50px;*/
-    color: #6b6b6b;
+.typing-placeholder {
+  font-size: 1.3rem;
+  font-weight: 900;
+  opacity: 0.8;
+  margin: 1rem 0 2rem;
+  color: #6b6b6b;
     
 }
 
@@ -386,6 +297,107 @@ nav {
 }
 
 
+
+/*---=====Elementi visivi - home=====---*/
+.visual-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.visual-element {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #111;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px #222 inset;
+}
+
+.visual-element::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #979696;
+  border-right-color: #979696;
+  animation: spin 2s linear infinite;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.visual-element i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 28px;
+  color: #666666;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+
+.intro-paragraph {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: aliceblue;
+}
+
+
+
+/*---=====Media Queries=====--- */
+@media (max-width: 768px) {
+
+
+  .btn {
+    padding: 0.6rem 1.8rem;
+  }
+
+  .line {
+    width: 90%;
+  }
+
+  .con-h1-type{
+    height: 50px;
+  }  
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; 
+  }
+}
 
 
 /* ------------------------------------------Sezione Chi Sono-------------------------------------------- */
@@ -1151,62 +1163,6 @@ body {
 }
 
 
-
-
-
-
-
-
-.cta-container {
-
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  background: rgba(255, 255, 255, 0.05); /* trasparenza leggera */
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-
-.cta-text {
-  font-size: clamp(16px, 2vw, 18px);
-  line-height: 1.6;
-
-  /*margin-bottom: 30px;*/
-  /*font-family: 'Inter', sans-serif;*/
-  font-weight: 400;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 
   @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
@@ -1589,6 +1545,32 @@ body {
 
 
 
+
+.main_container {
+  background: rgba(255, 255, 255, 0.05); /* trasparenza leggera */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+
+
+.p_contact {
+  text-align: center;
+  
+  font-size: 1.1rem;    /* leggermente più leggibile, opzionale */
+  line-height: 1.6;     /* migliora la leggibilità del paragrafo */
+       /* evita righe troppo lunghe su schermi larghi */
+  /*margin-left: auto;
+  margin-right: auto;*/
+  color: #ffffff;          /* colore più morbido del nero pieno */
+}
 
 
 
