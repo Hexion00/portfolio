@@ -9,12 +9,7 @@ hr{border:none; border-bottom: 1px solid #ddd}
 
 /*---=====Variabili=====---*/
 
-
-
-/*codice del header*/
-/*variabili css*/
 :root {
-  /*--primary: #00fff7;*/
   --primary: #d1d4d4;
   --text: #ffffff;
   --bg: #0b0c10;
@@ -23,12 +18,15 @@ hr{border:none; border-bottom: 1px solid #ddd}
   --hover-shadow: 0 0 25px rgba(0, 255, 247, 0.1);
 }
 
+body{
+  background-color: rgb(85, 85, 85);
+}
+
 #main-prin {
   overflow-x: clip;
 }
 
 .container_magic{
-  /*margin-bottom: 100px;*/
   padding: 0px 10px;
   text-align: center;
   justify-content: center;
@@ -40,7 +38,6 @@ hr{border:none; border-bottom: 1px solid #ddd}
   justify-content: space-between;
   gap: 1.5rem;
   max-width: 900px;
-  /*margin: 3rem auto;*/
   padding: 0 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #d4af37;
@@ -48,23 +45,9 @@ hr{border:none; border-bottom: 1px solid #ddd}
 
 
 
-
-
-.about, .projects, .contact {
-  padding: 0px 5px;
-  background-color: black;
-  
-}
-
-
-
 .hero {
   display: flex;
-  /*justify-content: center;
-  align-items: center;*/
   flex-direction: column;
-  /*height: 100vh;*/
-  /*text-align: center;*/
   width: 100%;
 
 }
@@ -92,7 +75,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  /*background-color: #333333;*/
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -137,11 +119,12 @@ nav {
   left: -300px;
   top: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
+  background: black;
   width: 250px;
   transition: all 0.3s ease;
   padding: 50px 20px;
   z-index: 999;
+  text-align: center;
 }
 
 .mobile-nav .a-hamburger {
@@ -316,11 +299,6 @@ nav {
 /*---=====Media Queries=====--- */
 @media (max-width: 768px) {
 
-
-  .btn {
-    padding: 0.6rem 1.8rem;
-  }
-
   .line {
     width: 90%;
   }
@@ -348,11 +326,11 @@ nav {
 
 
 /* ------------------------------------------Sezione Chi Sono-------------------------------------------- */
-/*#about {
-  padding: 0px 20px;
+
+#about {
+  padding: 0px 5px;
   background-color: black;
-  
-}*/
+}
 
 /*---=====Title_section=====---*/
 .container_section {
@@ -461,7 +439,7 @@ nav {
 
 .p_about {
   font-size: clamp(16px, 4vw, 19px);
-  color: #bbb;
+  color: #ffffff;
   text-align: justify;
   hyphens: auto;
   line-height: 1.6;
@@ -607,33 +585,23 @@ nav {
 .skill {
   display: flex;
   align-items: center;
-  gap: 16px; /* più spazio tra icona e testo */
+  gap: 16px; 
   padding: 12px 0;
-  color: #e0e0e0; /* testo chiaro e più morbido */
+  color: #e0e0e0; 
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700; /* più deciso */
-  font-size: 1.2rem; /* più grande */
-  border-left: 4px solid #FFD700; /* linea un po’ più spessa */
+  font-weight: 700; 
+  font-size: 1.2rem; 
+  border-left: 4px solid #a8a8a7; 
   cursor: default;
   padding-left: 10px;
 }
 
 .skill i {
-  font-size: 28px; /* icona più grande e d’impatto */
+  font-size: 28px; 
   color: #4fc3f7;
   min-width: 32px;
   text-align: center;
 }
-
-
-
-
-
-/*.skill i {
-  font-size: 42px;
-  color: #aaaaaa;
-  transition: transform 0.3s ease;
-}*/
 
 .skill span {
   font-size: 19px;
@@ -642,17 +610,6 @@ nav {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
-/*.skill:hover {
-  background: #272727;
-  border-left: 4px solid #f1c40f; 
-  padding-left: 30px; 
-}
-
-.skill:hover i {
-  transform: none; 
-}*/
-
 
 
 .button-container {
@@ -795,7 +752,6 @@ nav {
 @media (max-width: 900px) {
   #about_1 {
     grid-template-columns: 1fr;
-    /*padding: 40px 20px;*/
   }
 
   .about-left {
@@ -814,7 +770,6 @@ nav {
   }
 
   .about-right {
-    /*padding: 0 10px;*/
     align-items: flex-start;
     text-align: left;
   }
@@ -826,7 +781,6 @@ nav {
 
   .study {
     margin-bottom: 20px;
-    /*width: 100%;*/
   }
 }
 
@@ -855,9 +809,7 @@ nav {
 
 
 @media (max-width: 768px) {
-  /*.container_info {
-    padding: 20px;
-  }*/
+
 
   #about_info {
     display: flex;
@@ -872,7 +824,7 @@ nav {
   .skills-container,
   .skills-left,
   .skills-right {
-    /*width: 100%;*/
+    width: 100%;
     display: block;
   }
 
@@ -934,10 +886,13 @@ nav {
 
 
 /* =====================================Sezione Progetti============================================ */
-/*#projects {
+
+
+#projects{
+  padding: 0px 5px;
   background-color: black;
-  position: relative;
-}*/
+  
+}
 
 .folder {
   background-color: #141414;
@@ -1024,7 +979,6 @@ nav {
   letter-spacing: 2px;
   filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.05));
   margin-bottom: -90px;
-  /*margin-bottom: 100px;*/
   
 }
 
@@ -1050,7 +1004,6 @@ nav {
   @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
   #h1-project {
     font-family: 'Merriweather', serif;
-    /*font-size: 2.8rem;*/
     font-weight: 700;
     color: transparent; 
     background: rgba(231, 192, 107, 0.3); 
@@ -1091,8 +1044,6 @@ nav {
   /*---======Siti=====---*/
 
   /*---Dante---*/
- 
-
   .img-dante{
     width: 100%;
     height: auto;
@@ -1127,18 +1078,6 @@ nav {
 }
   
 
-
-
-
-
-
-
-
-
-
-
-
-
 .project-card {
   flex: 0 0 auto;
   width: 340px;
@@ -1148,7 +1087,6 @@ nav {
   display: flex;
   overflow: hidden;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  /*margin-right: 20px;*/
   transition: transform 0.3s ease;
   border: white 1px solid;
   position: relative;
@@ -1253,7 +1191,6 @@ nav {
   position: relative;
   width: 50%;
   max-width: 250px;
-  /*padding: 1.2rem;*/
   margin-right: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
@@ -1368,9 +1305,6 @@ nav {
 
 
 
-
-
-    
 @media (max-width: 400px) {
   .card_project {
     width: 90%;
@@ -1435,7 +1369,7 @@ nav {
   }
 }
 
-/* ✅ Telefoni piccoli (max 400px) */
+
 @media (max-width: 400px) {
   .pulse-title {
     margin-bottom: -80px;
@@ -1444,7 +1378,7 @@ nav {
   }
 }
 
-/* ✅ Telefoni medi (401px – 600px) */
+
 @media (min-width: 401px) and (max-width: 600px) {
   .pulse-title {
   margin-bottom: -80px;
@@ -1452,7 +1386,6 @@ nav {
   }
 }
 
-/* ✅ Tablet verticali (601px – 768px) */
 @media (min-width: 601px) and (max-width: 768px) {
   .pulse-title {
     font-size: 3.5rem;
@@ -1480,14 +1413,13 @@ nav {
 /* =====================================Sezione Contatti=============================================== */
 
 
-/*#contact {
+
+
+#contact {
+  padding: 0px 5px;
   background-color: black;
-  position: relative;
-  z-index: 1;
-}*/
-
-
-
+  
+}
 
 .main_container {
   background: rgba(255, 255, 255, 0.05); /* trasparenza leggera */
@@ -1545,11 +1477,6 @@ nav {
   min-height: 220px;
 }
 
-.contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-}
-
 .card-image {
   width: 120px;
   height: auto;
@@ -1586,7 +1513,7 @@ nav {
 
 .contact-button {
   padding: 10px 18px;
-  background: linear-gradient(135deg, #00feba, #5b5ff6);
+  background: linear-gradient(135deg, #bfc0c0, #7a7a7a);
   color: #000;
   font-weight: bold;
   border: none;
@@ -1598,7 +1525,7 @@ nav {
 }
 
 .contact-button:hover {
-  background: linear-gradient(135deg, #5b5ff6, #00feba);
+  background: linear-gradient(135deg, #ffffff, #333333);
 }
 
     @media (max-width: 992px) {
@@ -1670,16 +1597,16 @@ nav {
 /* Media Queries */
 @media (max-width: 768px) {
           .contact-container {
-              gap: 20px; /* Ridurre il gap per schermi più piccoli */
+              gap: 20px; 
           }
       
           .contact-card {
-              width: 280px; /* Ridurre la larghezza per dispositivi mobili */
-              height: auto; /* Permettere l'altezza automatica */
+              width: 280px; 
+              height: auto; 
           }
       
           #contact h2 {
-              font-size: 2.5rem; /* Ridurre la dimensione del testo per dispositivi più piccoli */
+              font-size: 2.5rem; 
           }
       
           .additional-elements h3 {
@@ -1698,12 +1625,6 @@ nav {
         /*width: 45%;*/
         margin: 10px;
     }
-
-
-
-   /* #home h1 {
-        font-size: 2.5rem;
-    }*/
 
     #home p {
         font-size: 1rem;
